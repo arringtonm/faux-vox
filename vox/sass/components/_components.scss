@@ -1,0 +1,36 @@
+.box {
+  width: 100%;
+  overflow: hidden;
+}
+.box:not(:first-of-type) {
+  padding-top: 20px;
+  border-top: 1px solid $grey-md;
+  margin-top: 20px;
+}
+.box p.title {
+  font-weight: bolder;
+  color: $grey;
+  font-family: $helvetica;
+  font-size: 16px;
+  margin-top: 0px;
+  &:hover {
+    color: $grey-dk;
+    cursor: pointer;
+  }
+
+}
+.box p {
+  margin-top: 10px;
+  color: $grey;
+  font-size: 12px;
+  font-weight: light;
+  font-family: $helvetica;
+}
+.box p.byline {
+  font-style: italic;
+  font-family: serif;
+}
+.feature-img {
+  max-width: 100%;
+  height: auto;
+}
