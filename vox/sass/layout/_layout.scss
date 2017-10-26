@@ -9,7 +9,13 @@ body {
   // justify-content: center;
 
 }
-
+h1 {
+  color: $grey;
+  font-family: $helvetica;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 10px;
+}
 header {
   width:100%;
   height:65px;
@@ -34,7 +40,6 @@ section {
   align-items: center;
 }
 .nav-bar {
-  // display: inline-block;
   font-weight: bold;
   display: flex;
 }
@@ -67,11 +72,11 @@ section {
   display: flex;
   justify-content: center;
 }
-.new-container {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-}
+// .new-container {
+//   width: 100vw;
+//   display: flex;
+//   justify-content: center;
+// }
 .title-bar {
   margin-top: 40px;
   width: 1000px;
@@ -84,13 +89,28 @@ section {
 .title-bar-title {
   color: $grey;
   font-style: italic;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bolder;
   background-color: $white;
   padding: 15px;
   transform: translateY(-30px);
 }
+.latest-bar-title {
+  @extend .title-bar-title;
+  padding-left: 0px;
+  transform: translate(0px, -30px);
+  // transform: translateX(10px);
+}
+.video-title {
+  @extend .title-bar-title;
+  padding-right: 350px;
+  padding-top: 45px;
+  padding-left: 35px;
+  margin-bottom: -75px;
+  transform: translate(-30px,-75px);
 
+
+}
 .top-stories-grid {
   @include grid-container;
   display: flex;
@@ -102,13 +122,6 @@ section {
 }
 .top-stories-item {
   @include grid-column(3);
-
-  // test & interior text:
-  // height: 200px;
-  // border: 1px dashed $grey;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 .left-item {
   margin-left: 0;
@@ -116,15 +129,49 @@ section {
 .top-stories-feature {
   @include grid-column(6);
 
-  // test & interior text:
-  // height: 200px;
-  // border: 1px dashed $grey;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 .the-latest-title-bar {
   @extend .title-bar;
   border-left: none;
   border-right: none;
+  width: 940px;
+  justify-content: left;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.more-stories-grid {
+  @include grid-container;
+  display: flex;
+  // justify-content: left;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  // flex-direction: column;
+}
+.latest-stories-item {
+  @include grid-column(8);
+  margin-bottom: 0px;
+  flex-direction: column;
+
+}
+.video-grid {
+  @include grid-column(4);
+  // margin-top: 20px;
+}
+.video-item {
+  margin-bottom: 25px;
+  // width: 100%;
+  // border: 1px solid $grey;
+  background: url("../img/sleep.jpg");
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  & img {
+    height: 50px;
+    }
 }
