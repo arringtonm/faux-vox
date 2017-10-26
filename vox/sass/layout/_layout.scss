@@ -123,3 +123,8 @@ section {
   // justify-content: center;
   // align-items: center;
 }
+.the-latest-title-bar {
+  @extend .title-bar;
+  border-left: none;
+  border-right: none;
+}
